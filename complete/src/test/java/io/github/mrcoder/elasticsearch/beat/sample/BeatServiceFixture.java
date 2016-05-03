@@ -6,12 +6,24 @@ import org.junit.runner.RunWith;
 @RunWith(ConcordionRunner.class)
 public class BeatServiceFixture {
 
-    public Result split(String fullName) {
-        Result result = new Result();
-        String[] words = fullName.split(" ");
-        result.firstName = words[0];
-        result.lastName = words[1];
-        return result;
+    public void setUpClient(String type) {
+
+    }
+
+    public void indexBook() {
+
+    }
+
+    public Book retrieveTheBook() {
+        Book book = new Book();
+        book.name = "book name";
+        return book;
+    }
+
+
+    class Book {
+
+        public String name;
     }
 
     class Result {

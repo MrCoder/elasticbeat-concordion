@@ -4,7 +4,6 @@ Beat service will insert/update Transaction Status into Elasticsearch
 
 ### [Example](- "Simple Insert and Retrieve")
 
-We should be able to connect to Elasticsearch with [NodeClient](- setUpClient(#type)).
+We should be able to connect to Elasticsearch with [NodeClient](- "setUpClient(#type)").
 
-The full name [Jane Smith](- "#name") is [broken](- "#result = split(#name)") 
-into first name [Jane](- "?=#result.firstName") and last name [Smith](- "?=#result.lastName").
+Then [index a book](- "indexBook()") and [retrieve it](- "#book = retrieveTheBook()"). The retrieved book should have name as [book name](- "?=#book.name")
