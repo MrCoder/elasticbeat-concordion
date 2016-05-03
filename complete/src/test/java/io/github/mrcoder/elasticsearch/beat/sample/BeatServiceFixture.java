@@ -1,13 +1,21 @@
 package io.github.mrcoder.elasticsearch.beat.sample;
 
-import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import testsupport.SpringifiedConcordionRunner;
 
-@RunWith(ConcordionRunner.class)
+@RunWith(SpringifiedConcordionRunner.class)
+@ContextConfiguration
+@EnableAnnotationConfiguration
 public class BeatServiceFixture {
 
-    public void setUpClient(String type) {
+    @Autowired
+    public AnotherBean anotherBean;
 
+
+    public void setUpClient(String type) {
+        System.out.println(anotherBean);
     }
 
     public void indexBook() {
